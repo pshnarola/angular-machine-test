@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RegistartionComponent } from './registartion/registartion.component';
-import { StudentdeatilComponent } from './studentdeatil/studentdeatil.component';
-
 
 const routes: Routes = [
-  { path: "registartion", component: RegistartionComponent },
-  { path: "detail", component: StudentdeatilComponent }
+  {
+    path: '',
+    loadChildren: () => import('./student/student.module').then(m => m.StudentModule)
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

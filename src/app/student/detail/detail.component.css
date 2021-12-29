@@ -1,0 +1,10 @@
+.student-diplay {
+  width: 100%;
+}
+
+.container.user-info-wrapper span {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
